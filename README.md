@@ -2,7 +2,8 @@ This project aims to combat counterfeit products in the market using blockchain 
 
 It includes:
           Product registration by verified companies
-          Product verification using Product ID and QR code Secure, immutable product records on the blockchain
+          Product verification using Product ID and QR code Secure, immutable product records on the blockchain'
+          
 FEATURES:        
           Company Login/Signup: Only verified companies can register products.
           Product Registration: Companies register products with details and upload a watermark code/QR.
