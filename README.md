@@ -1,6 +1,9 @@
 This project aims to combat counterfeit products in the market using blockchain technology. By integrating a QR code and watermark-based verification system, it ensures product authenticity and transparency from the manufacturer to the consumer.
+
 It includes:
+
           Product registration by verified companies
+          
           Product verification using Product ID and QR code Secure, immutable product records on the blockchain'
           
 FEATURES:        
