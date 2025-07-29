@@ -6,7 +6,8 @@ It includes:
           
           Product verification using Product ID and QR code Secure, immutable product records on the blockchain'
           
-FEATURES:        
+FEATURES:  
+
           *Company Login/Signup: Only verified companies can register products.
          
           *Product Registration: Companies register products with details and upload a watermark code/QR.
