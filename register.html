@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Product - Grand Mart</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.4/web3.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('lip.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            background: rgb(228, 224, 224);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            width: 600px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #1c3faa;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            background-color: #1c3faa;
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #1745a0;
+        }
+
+        .home-link {
+            display: block;
+            margin-top: 15px;
+            color: #1c3faa;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .logout-btn {
+            margin-top: 15px;
+            background: red;
+            color: white;
+        }
+
+        .logout-btn:hover {
+            background: darkred;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Grand Smart</h1>
+        <h2>Register Product</h2>
+
+        <input type="text" id="productNameInput" placeholder="Enter Product Name">
+        <input type="text" id="ipfsHashInput" placeholder="Enter IPFS Hash (QR Code)">
+        <button onclick="registerProduct()">Register</button>
+        <a href="home.html" class="home-link">Go to Home</a>
+        <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+
+    <script>
+        // Redirect if user is not logged in
+        window.onload = function() {
+            const token = localStorage.getItem("authToken");
+            if (!token) {
+                alert("❌ Please log in first!");
+                window.location.href = "login.html";  // Redirect to login page
+            } else {
+                alert("✅ Welcome! Please enter product details to register.");
+            }
+        };
+
+        function logout() {
+            localStorage.removeItem("authToken"); // Remove token
+            alert("✅ Logged Out!");
+            window.location.href = "login.html"; // Redirect to login page
+        }
+        
+
+       
+    </script>
+    <script src="script.js"></script>
+
+</body>
+</html>

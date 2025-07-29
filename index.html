@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Product Detection</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.4/web3.min.js"></script>
+    <script src="https://unpkg.com/html5-qrcode"></script>
+    <link rel="stylesheet" href="styles.css">
+    
+    <a href="home.html" class="btn btn-primary mt-3">Back to Home</a>
+
+</head>
+<body>
+
+    <h1>Fake Product Detection</h1>
+
+    <!-- Product Registration -->
+    <div class="container">
+        <h2>Register Product</h2>
+        <input type="text" id="productNameInput" placeholder="Enter Product Name">
+        <input type="text" id="ipfsHashInput" placeholder="Enter IPFS Hash (QR Code)">
+        <button onclick="registerProduct()">Register</button>
+    </div>
+
+    <!-- Product Verification -->
+    <div class="container">
+        <h2>Verify Product</h2>
+        <input type="text" id="productId" placeholder="Enter Product ID">
+        <button onclick="verifyProduct()">Verify</button>
+
+        <h3>OR Scan QR Code</h3>
+        <div id="reader"></div>
+        <button onclick="startScanner()">Start Scanner</button>
+    </div>
+
+    <!-- Verified Product Details -->
+    <div class="container">
+        <h2>Product Details</h2>
+        <p><strong>Name:</strong> <span id="productName">N/A</span></p>
+        <p><strong>IPFS Hash:</strong> <span id="ipfsHash">N/A</span></p>
+        <p><strong>Owner:</strong> <span id="owner">N/A</span></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

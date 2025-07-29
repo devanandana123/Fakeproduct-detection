@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin: 0;
+    background: linear-gradient(135deg, #e0f7fa, #ffffff);
+    color: #333;
+}
+
+/* Navigation Bar */
+.navbar {
+    background: rgba(35, 37, 40, 0.8) !important;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Text */
+h2, h3, h4 {
+    color: #1c2024;
+    font-weight: 600;
+}
+
+/* QR Scanner Box */
+#reader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 400px;
+    height: auto;
+    margin: 20px auto;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #22262b;
+}
+
+/* Input Fields */
+input[type="text"], input[type="file"] {
+    width: 50%;
+    padding: 10px;
+    margin: 10px auto;
+    border: 1px solid #272a2e;
+    border-radius: 8px;
+    font-size: 16px;
+    text-align: center;
+    outline: none;
+    transition: 0.3s ease-in-out;
+}
+
+input:focus {
+    border-color: #272a2e;
+    box-shadow: 0px 0px 8px rgba(0, 91, 187, 0.3);
+}
+
+/* Buttons */
+button {
+    background-color: #303438;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 18px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #1f2021;
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 91, 187, 0.2);
+}
+
+/* Product Details Box */
+.product-details {
+    width: 100%;
+    margin: 20px auto;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+/* Footer */
+footer {
+    background-color: #1f2225;
+    color: white;
+    padding: 15px;
+    margin-top: 20px;
+}

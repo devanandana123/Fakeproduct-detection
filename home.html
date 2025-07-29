@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Product Detection</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+   
+
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .hero-section {
+            background: url('lip.jpg') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            color: rgb(227, 209, 224);
+            text-align: center;
+        }
+        .overlay {
+          
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .btn-custom {
+            background-color: #380c37;
+            color: white;
+            padding: 25px 100px;
+            border-radius: 10px;
+            text-decoration: none;
+        }
+        .btn-custom:hover {
+            background-color: #341381;
+        }
+    </style>
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="home.html">GRAND SMART</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="verify.html">Verify Product</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Register Product</a></li>
+                </ul>
+
+                </div>
+        </div>
+    </nav>
+    
+    <section class="hero-section">
+        <div class="overlay">
+            <div>
+                <h1>Your Trust, Our Priority – Authenticate Every Purchase</h1><br><br>
+                <!--<p>Detect fake products by verifying QR codes with our blockchain-based solution.</p>-->
+                <a href="verify.html" class="btn btn-custom">Verify Our Products</a>
+               <!--<a href="login.html" class="btn btn-custom">Register Product</a>--> 
+            </div>
+        </div>
+    </section>
+    
+    <div class="container my-5">
+        <h2>How It Works</h2>
+        <p>Easily verify the authenticity of your cosmetic products by scanning the QR code with our secure platform.</p>
+    </div>
+    
+    <footer class="bg-dark text-center text-white p-3">
+        <p>&copy; 2025 Fake Product Detection | Powered by Grand smart</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

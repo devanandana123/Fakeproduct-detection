@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Product - Grand Mart</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.4/web3.min.js"></script>
+    <script src="https://unpkg.com/html5-qrcode"></script>
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+    font-family: Arial, sans-serif;
+    background: url('top-cosmetic-manufacturers.jpg') no-repeat center center/cover;
+    min-height: 100vh; /* Allow background to extend */
+    background-attachment: fixed; /* Prevent background cutoff */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.right-section {
+    flex: 1;
+    background: rgb(83, 55, 55);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-height: 100vh; /* Limit max height */
+    overflow-y: auto; /* Enable scrolling when expanded */
+}
+.product-details p {
+    margin-bottom: 15px; /* Adds space between each detail */
+}
+h2, h3 {
+    margin-bottom: 20px; /* Adds space below headings */
+}
+
+.product-details {
+    margin-top: 30px; /* Adds space above Product Details */
+}
+
+.product-details p {
+    margin-bottom: 15px; /* Adds space between product details */
+}
+
+
+.main-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+    background: url('lip.jpg') no-repeat center center/cover; /* Add background image */
+    border-radius: 20px;
+    box-shadow: 0px 4px 15px rgba(219, 212, 212, 0.2);
+    padding: 40px;
+}
+
+
+       
+        .left-section {
+            flex: 1;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-right: 20px;
+        }
+
+        .left-section img {
+            width: 500px; /* Adjust the size as needed */
+            height: auto;
+            margin-bottom: 30px;
+        }
+
+        .left-section h1 {
+            color: #eee6ec;
+            font-size: 62px;
+            font-weight: bold;
+        }
+
+        .quote {
+            font-style: italic;
+            font-size: 25px;
+            color: #f5f5f5;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        .home-link {
+            display: inline-block;
+            margin-top: auto;
+            color: #eee6ec;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            padding: 10px;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .right-section {
+            flex: 1;
+            background: rgb(251, 248, 251);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            width: 100%;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            background-color: #1c3faa;
+            color: white;
+            border: none;
+            padding: 18px;
+            font-size: 16px;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #1745a0;
+            transform: scale(1.05);
+        }
+
+        .product-details {
+            width: 100%;
+            margin: 20px auto;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            
+        }
+
+        @media (max-width: 900px) {
+            .main-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .left-section {
+                padding-right: 0;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+        
+        <!-- Left Section -->
+        <div class="left-section">
+            <h1>Grand Smart</h1><br>
+            <p class="quote">"Authenticity matters—Verify before you buy."</p><br>
+            <img src="real.png" alt=""> <!-- Centered Image -->
+
+            <a href="home.html" class="home-link">Go to Home</a> <!-- Link at the bottom -->
+        </div>
+        
+        <!-- Right Section -->
+        <div class="right-section">
+            <h2>Verify our Product by using QR code or Product id</h2>
+            <input type="text" id="productId" placeholder="Enter Product ID">
+            <button onclick="verifyProduct()">Verify</button>
+
+            <h3></h3>
+            <div id="reader"></div>
+            <button onclick="startScanner()">Start Scanner</button>
+
+            <div class="product-details">
+                <h2>Product Details</h2>
+                <p><strong>Name:</strong> <span id="productName">N/A</span></p>
+                <p><strong>IPFS Hash:</strong> <span id="ipfsHash">N/A</span></p>
+                <p><strong>Owner:</strong> <span id="owner">N/A</span></p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
